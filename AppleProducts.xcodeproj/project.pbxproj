@@ -60,7 +60,6 @@
 			children = (
 				2C003DF721C297B3004A9EE6 /* AppDelegate.swift */,
 				2C003E1221C2B273004A9EE6 /* Controllers */,
-				2C003E0921C29815004A9EE6 /* New Group */,
 				2C003E1321C2B288004A9EE6 /* View */,
 				2C003DFE21C297B5004A9EE6 /* Assets.xcassets */,
 				2C003E0021C297B5004A9EE6 /* LaunchScreen.storyboard */,
@@ -69,19 +68,20 @@
 			path = AppleProducts;
 			sourceTree = "<group>";
 		};
-		2C003E0921C29815004A9EE6 /* New Group */ = {
+		2C003E0921C29815004A9EE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2C003E0A21C2982D004A9EE6 /* Product.swift */,
 				2C003E0C21C299E7004A9EE6 /* ProductLine.swift */,
 			);
-			path = "New Group";
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2C003E1221C2B273004A9EE6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				2C003E1021C2AED7004A9EE6 /* ProductTableViewController.swift */,
+				2C003E0921C29815004A9EE6 /* Model */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
