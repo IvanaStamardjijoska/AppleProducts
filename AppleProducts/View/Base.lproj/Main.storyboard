@@ -9,31 +9,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Product Table View Controller-->
+        <!--Products Table View Controller-->
         <scene sceneID="78f-pz-FGG">
             <objects>
-                <tableViewController id="vDC-aY-WjA" customClass="ProductTableViewController" customModule="AppleProducts" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vDC-aY-WjA" customClass="ProductsTableViewController" customModule="AppleProducts" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pQr-Tu-hER">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" textLabel="Kxp-Ex-Pvh" style="IBUITableViewCellStyleDefault" id="xuF-oJ-B3u">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="180" id="xuF-oJ-B3u" customClass="ProductTableViewCell" customModule="AppleProducts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xuF-oJ-B3u" id="xZp-u8-jGy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xuF-oJ-B3u" id="xZp-u8-jGy" customClass="ProductTableViewCell" customModule="AppleProducts" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kxp-Ex-Pvh">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWB-9k-MSq">
+                                            <rect key="frame" x="85" y="95" width="274" height="78"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="78" id="dI7-qN-u6g"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-Xw-Bbq">
+                                            <rect key="frame" x="12" y="12" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="Tbb-os-1ef"/>
+                                                <constraint firstAttribute="height" constant="64" id="tuv-Sh-YyW"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbe-kn-ReG">
+                                            <rect key="frame" x="96" y="27" width="271" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LWB-9k-MSq" firstAttribute="trailing" secondItem="xZp-u8-jGy" secondAttribute="trailingMargin" id="9fU-yS-MdU"/>
+                                        <constraint firstItem="cbe-kn-ReG" firstAttribute="leading" secondItem="Fph-Xw-Bbq" secondAttribute="trailing" constant="20" id="Asx-Rv-9c7"/>
+                                        <constraint firstItem="cbe-kn-ReG" firstAttribute="top" secondItem="xZp-u8-jGy" secondAttribute="top" constant="27" id="DpG-2j-ftY"/>
+                                        <constraint firstItem="Fph-Xw-Bbq" firstAttribute="leading" secondItem="xZp-u8-jGy" secondAttribute="leading" constant="12" id="aMZ-32-TRV"/>
+                                        <constraint firstItem="LWB-9k-MSq" firstAttribute="leading" secondItem="xZp-u8-jGy" secondAttribute="leadingMargin" constant="69" id="ccS-0q-eYe"/>
+                                        <constraint firstItem="Fph-Xw-Bbq" firstAttribute="top" secondItem="xZp-u8-jGy" secondAttribute="top" constant="12" id="m7a-FJ-aG4"/>
+                                        <constraint firstItem="LWB-9k-MSq" firstAttribute="top" secondItem="cbe-kn-ReG" secondAttribute="bottom" constant="47" id="mTC-ev-19x"/>
+                                        <constraint firstAttribute="trailing" secondItem="cbe-kn-ReG" secondAttribute="trailing" constant="8" id="siX-Kj-8oW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="84" minY="0.0" maxX="12" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="productDescriptionLabel" destination="LWB-9k-MSq" id="bbk-aR-uju"/>
+                                    <outlet property="productImageView" destination="Fph-Xw-Bbq" id="qEZ-D3-CZa"/>
+                                    <outlet property="productTitleLabel" destination="cbe-kn-ReG" id="vY5-42-4v4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

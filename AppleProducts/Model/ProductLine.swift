@@ -29,10 +29,32 @@ class ProductLine {
         
         var products = [Product] ()
         
-        products.append(Product(titled: "OS X", description: "Build on a rock-solid Unix.", imageName: "apple"))
+        products.append(Product(titled: "OS X", description: "Build on a rock-solid Unix.", imageName: "apple" ))
         
         return ProductLine (named: "Software", includeProduct: products)
     }
-
     
-}
+    private class func Mac() -> ProductLine {
+        
+        var products = [Product] ()
+        
+        products.append(Product(titled: "OS X", description: "Build on a rock-solid Unix.", imageName: "apple" ))
+        
+        return ProductLine (named: "Software", includeProduct: products)
+    }
+    private class func iphones() -> ProductLine {
+        
+        var products = [Product] ()
+        
+        products.append(Product(titled: "OS X", description: "Build on a rock-solid Unix.", imageName: "apple" ))
+        
+        return ProductLine (named: "Software", includeProduct: products)
+    }
+    private class func ipads() -> ProductLine {
+        
+        var products = [Product] ()
+        
+        products.append(Product(titled: "OS X", description: "Build on a rock-solid Unix.", imageName: "apple" ))
+        
+        return ProductLine (named: "Software", includeProduct: products)
+    }}

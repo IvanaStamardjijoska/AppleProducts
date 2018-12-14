@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductTableViewController: UITableViewController {
+class ProductsTableViewController: UITableViewController {
     
     
     //MARK: Data Model
@@ -17,6 +17,11 @@ class ProductTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Apple Store"
+        
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableView.automaticDimension
 
         
     }
@@ -32,9 +37,10 @@ class ProductTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
         let product = products[indexPath.row]
-        cell.textLabel?.text = product.title
+        cell.product = product
+        
         return cell
     
 }
